@@ -1,0 +1,31 @@
+@startuml
+class Customer{
+    - name
+}
+
+class Stock{
+    - unitPrice
+}
+
+class StockOrder{
+    - unitPrice
+    - commission
+    - quantity
+}
+
+class InvestmentAccount extends Account{
+}
+class Account{
+    # balance
+}
+
+class SavingsAccount extends Account{
+    -interrestRate
+}
+
+StockOrder o-- Stock
+StockOrder o-- InvestmentAccount
+
+Customer -- Account
+
+@enduml

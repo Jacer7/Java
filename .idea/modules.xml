@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java-for-ais.iml" filepath="$PROJECT_DIR$/java-for-ais.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mob-programming-project/mob-programming-project.iml" filepath="$PROJECT_DIR$/mob-programming-project/mob-programming-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personCSVReader/personCSVReader.iml" filepath="$PROJECT_DIR$/personCSVReader/personCSVReader.iml" />
+    </modules>
+  </component>
+</project>
