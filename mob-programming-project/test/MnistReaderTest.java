@@ -37,10 +37,6 @@ public class MnistReaderTest {
 
 		System.out.println(label);
 
-
-
-
-
 	}
 
 	private static double[][] convertToMatrix(String[] parts) {

@@ -14,6 +14,9 @@ public class MnistImageReaderTest {
 		File file = new File("E:\\EPITA\\Java\\Assignment\\mob-programming-project\\mnist_test.csv");
 		List<Image> images = ImageReader.read(file);
 		images.sort(Comparator.comparingInt(Image::getLabel));
+		List<Image> pictures;
+		Centroid.TrainCentroids(images);
+		Centroid.computeSD(images);
 
 		Map<Integer, Integer> distributionMap = new LinkedHashMap<>();
 
@@ -60,11 +63,28 @@ public class MnistImageReaderTest {
 				System.out.println();//read out all matrix
 
 			}
+
+			//	Third part: Evaluating the model
+
+			double sum1 = 0.0, standardDeviation = 0.0;
+			int length = Jay.length;
+			for (int i = 1; i < 28 - 1; i++) {
+				for (int j = 1; j < 28 - 1; j++) {
+					sum1 += Jay[i][j];
+				}
+			}
+			double mean = sum1 / length;
+			for (int i = 1; i < 28 - 1; i++) {
+				for (int j = 1; j < 28 - 1; j++) {
+					standardDeviation += Math.pow(Jay[i][j] - mean, 2);
+				}
+			}
+			System.out.println(Math.sqrt(standardDeviation / length));
 		}
 	}
 }
 
-//	Third part: Evaluating the model
+
 
 
 
